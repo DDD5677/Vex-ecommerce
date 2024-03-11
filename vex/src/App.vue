@@ -5,7 +5,7 @@
 </template>
 
 
-<script lang="ts">
+<script>
 import MainLayout from "@/layouts/MainLayout.vue";
 import EmptyLayout from "@/layouts/EmptyLayout.vue"
 import { RouterView } from 'vue-router'

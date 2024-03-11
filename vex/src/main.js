@@ -22,5 +22,4 @@ app.component("MainInput", input);
 app.component("brand", brand);
 app.use(createPinia());
 app.use(router);
-
 app.mount("#app");

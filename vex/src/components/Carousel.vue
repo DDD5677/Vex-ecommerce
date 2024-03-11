@@ -12,30 +12,36 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="@/assets/images/slider/slider-1.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption text-center me-auto ms-auto d-none d-md-block">
-						<h5>Products</h5>
-						<h4>The beauty of nature is hidden in details</h4>
-						<button class="btn btn-outline-light">Shop Now</button>
+					<div class="carousel-caption  text-center me-auto ms-auto d-none d-md-block ">
+						<h5 class="animate__animated animate__backInUp ">Products</h5>
+						<h4 class="animate__animated animate__backInUp animate__delay-1s">The beauty of nature is hidden in
+							details</h4>
+						<button class="btn btn-outline-light animate__animated animate__backInUp animate__delay-2s">Shop
+							Now</button>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img src="@/assets/images/slider/slider-2.jpg" class="d-block w-100 h-100" alt="...">
-					<div class="carousel-caption text-end ms-auto d-none d-md-block">
-						<h5>Products</h5>
-						<h4>The beauty of nature is hidden in details</h4>
-						<button class="btn btn-outline-light">Shop Now</button>
+					<div class="carousel-caption  text-end ms-auto d-none d-md-block">
+						<h5 class="animate__animated animate__backInUp">Products</h5>
+						<h4 class="animate__animated animate__backInUp animate__delay-1s">The beauty of nature is hidden in
+							details</h4>
+						<button class="btn btn-outline-light animate__animated animate__backInUp animate__delay-2s">Shop
+							Now</button>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img src="@/assets/images/slider/slider-3.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption text-start me-auto d-none d-md-block">
-						<h5>Products</h5>
-						<h4>The beauty of nature is hidden in details</h4>
-						<button class="btn btn-outline-light">Shop Now</button>
+						<h5 class="animate__animated animate__backInUp">Products</h5>
+						<h4 class="animate__animated animate__backInUp animate__delay-1s">The beauty of nature is hidden in
+							details</h4>
+						<button class="btn btn-outline-light animate__animated animate__backInUp animate__delay-2s">Shop
+							Now</button>
 					</div>
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+			<button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
 				data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
@@ -50,7 +56,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped lang="scss">

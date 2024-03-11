@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@heroicons/vue": "^2.1.1",
-    "bootstrap": "^5.3.3"
-  },
-  "devDependencies": {
-    "sass": "^1.71.1"
-  }
-}
