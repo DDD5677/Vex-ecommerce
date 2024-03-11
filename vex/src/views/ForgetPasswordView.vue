@@ -1,0 +1,69 @@
+<template>
+	<section class="forget-password">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="form">
+						<brand></brand>
+						<h2 class="title">
+							WELCOME BACK
+						</h2>
+						<form action="">
+							<p class="text-start">
+								Please enter the email address for your account. A verification code will be sent to you. Once
+								you
+								have received the verification code, you will be able to choose a new password for your account.
+							</p>
+							<MainInput type="email" placeholder="Account email address" required></MainInput>
+							<DarkButton btn>Request password reset</DarkButton>
+						</form>
+						<p>
+							<RouterLink to="/signin">Back to log in</RouterLink>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+.forget-password {
+	.form {
+		margin: 100px 0;
+		padding: 30px;
+		border: 1px solid #dedede;
+		text-align: center;
+
+		.title {
+			font-size: 25px;
+			margin: 40px 0 10px;
+		}
+
+		form {
+			margin-top: 40px;
+
+			p {
+				margin: 0 0 20px;
+			}
+		}
+
+		.main-input {
+			width: 100%;
+			margin-bottom: 15px;
+			height: 45px;
+			font-size: 12px;
+		}
+
+		p {
+			font-size: 15px;
+			margin: 20px 0 10px;
+			color: #757575;
+		}
+	}
+}
+</style>
