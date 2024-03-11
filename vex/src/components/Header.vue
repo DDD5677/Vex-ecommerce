@@ -2,19 +2,19 @@
 	<header class="header container">
 		<div class="navbar-top">
 			<div class="row align-items-center">
-				<div class="col-md-4">
-					<div class="phone text-start">
+				<div class="col-lg-4">
+					<div class="phone">
 						<Icon>
 							<PhoneIcon />
 						</Icon>
 						<a href="tel:+998903385677" class="tel">+998(90)-338-56-77</a>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex justify-content-center">
+				<div class="col-lg-4 d-flex justify-content-center">
 					<brand />
 				</div>
-				<div class="col-md-4">
-					<ul class="nav justify-content-end">
+				<div class="col-lg-4">
+					<ul class="nav">
 
 						<li @mouseover="showCart" @mouseleave="hideCart" class="nav-item">
 							<a class="nav-link active d-flex align-items-center" aria-current="page" href="#">
@@ -23,13 +23,38 @@
 								</Icon>Cart
 							</a>
 							<Transition>
-								<ul v-if="cart" class="dropdown-menu d-flex flex-column">
-									<li><a class="dropdown-item" href="#">Blog left sidebar</a></li>
-									<li><a class="dropdown-item" href="#">Blog right sidebar</a></li>
-									<li><a class="dropdown-item" href="#">Blog full width</a></li>
-									<li><a class="dropdown-item" href="#">Blog two columns</a></li>
-									<li><a class="dropdown-item" href="#">Blog single</a></li>
-								</ul>
+								<div v-if="cart" class="dropdown-menu d-flex flex-column cart">
+									<div class="product-cart d-flex">
+										<div class="img-box">
+											<img src="@/assets/images/shop/cart/cart-1.jpg" alt="">
+										</div>
+										<div class="content">
+											<div class="product-name"><a href="#">Ladies Bag</a></div>
+											<div class="product-price">1 x $1200</div>
+											<div href="#" class="total">$1200</div>
+										</div>
+										<a class="remove-product" href="#"><i class="fa-solid fa-xmark"></i></a>
+									</div>
+									<div class="product-cart d-flex">
+										<div class="img-box">
+											<img src="@/assets/images/shop/cart/cart-2.jpg" alt="">
+										</div>
+										<div class="content">
+											<div class="product-name"><a href="#">Ladies Bag</a></div>
+											<div class="product-price">1 x $1200</div>
+											<div href="#" class="total">$1200</div>
+										</div>
+										<a class="remove-product" href="#"><i class="fa-solid fa-xmark"></i></a>
+									</div>
+									<div class="total-price d-flex justify-content-between">
+										<span>Total</span>
+										<span>$1799.0</span>
+									</div>
+									<div class="cart-btns">
+										<DarkButton>View cart</DarkButton>
+										<DarkButton class="light">Checkout</DarkButton>
+									</div>
+								</div>
 							</Transition>
 						</li>
 						<li @mouseover="showSearch" @mouseleave="hideSearch" class="nav-item">
@@ -205,11 +230,26 @@
 							</a>
 							<Transition>
 								<ul v-if="blog" class="dropdown-menu d-flex flex-column">
-									<li><a class="dropdown-item" href="#">Blog left sidebar</a></li>
-									<li><a class="dropdown-item" href="#">Blog right sidebar</a></li>
-									<li><a class="dropdown-item" href="#">Blog full width</a></li>
-									<li><a class="dropdown-item" href="#">Blog two columns</a></li>
-									<li><a class="dropdown-item" href="#">Blog single</a></li>
+									<li>
+										<RouterLink :to="{ name: 'blog left' }" class="dropdown-item" href="#">Blog left sidebar
+										</RouterLink>
+									</li>
+									<li>
+										<RouterLink :to="{ name: 'blog right' }" class="dropdown-item" href="#">Blog right sidebar
+										</RouterLink>
+									</li>
+									<li>
+										<RouterLink :to="{ name: 'blog full' }" class="dropdown-item" href="#">Blog full width
+										</RouterLink>
+									</li>
+									<li>
+										<RouterLink :to="{ name: 'blog grid' }" class="dropdown-item" href="#">Blog two columns
+										</RouterLink>
+									</li>
+									<li>
+										<RouterLink :to="{ name: 'blog single' }" class="dropdown-item" href="#">Blog single
+										</RouterLink>
+									</li>
 								</ul>
 							</Transition>
 						</li>
@@ -309,22 +349,101 @@ const hideShop = () => {
 	}
 
 	.navbar-top {
-		//display: flex;
-		//justify-content: space-between;
-		//align-items: center;
 		padding: 25px 0;
 		border-bottom: 2px solid #f2f2f2;
 
+		.cart {
+			padding: 15px;
+			width: 300px;
+
+			.remove-product {
+				position: absolute;
+				top: -5px;
+				right: 0px;
+				padding: 5px;
+				font-size: 16px;
+				color: #757575;
+			}
+
+			.product-cart {
+				position: relative;
+				font-size: 14px;
+				border-bottom: 1px solid #dedede;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+
+
+
+
+				.img-box {
+					padding-right: 20px;
+
+					img {
+						height: 100%;
+						width: 60px;
+					}
+				}
+
+				.content {
+					width: 100%;
+
+					.product-name {
+						color: #000;
+					}
+
+					.product-price {
+						margin: 15px 0 10px;
+						color: #757575;
+					}
+
+					.total {
+						font-weight: 600;
+						color: #757575;
+
+					}
+				}
+
+			}
+
+			.total-price {
+				font-weight: 500;
+				color: #000;
+				font-size: 14px;
+			}
+
+			.cart-btns {
+				margin-top: 15px;
+				display: flex;
+				justify-content: space-between;
+
+				.dark-btn {
+					width: 49%;
+					padding: 8px 25px;
+					font-size: 10px;
+
+					&.light {
+						background-color: #fff;
+						color: #000;
+
+						&:hover {
+							background-color: #000;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
 
 		.phone {
 			display: flex;
 			align-items: center;
+			justify-content: flex-start;
 			font-weight: 500;
 			font-size: 12px;
 		}
 
 		.nav {
-
+			justify-content: flex-end;
 
 			.nav-link {
 				color: black;
@@ -391,6 +510,33 @@ const hideShop = () => {
 			}
 		}
 
+	}
+}
+
+@media(max-width:992px) {
+	.header {
+		.navbar-top {
+
+			.phone,
+			.nav {
+				justify-content: center;
+				padding: 15px;
+			}
+		}
+
+		nav.navbar {
+			padding: 10px 0;
+
+			.navbar-toggler {
+				border: none;
+				color: #000;
+
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+		}
 	}
 }
 </style>

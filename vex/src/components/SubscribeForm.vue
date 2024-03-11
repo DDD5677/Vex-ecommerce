@@ -1,7 +1,7 @@
 <template>
 	<section class="subscribe">
 		<div class="container d-flex justify-content-center">
-			<div class="text-center w-50">
+			<div class="text-center">
 				<div class="content">
 					<h4 class="title">SUBSCRIBE TO NEWSLETTER</h4>
 					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
@@ -26,8 +26,13 @@
 	padding: 100px 0 80px;
 	background-color: #f9f9f9;
 
+	.text-center {
+		width: 50%;
+	}
+
 	.content {
 		padding: 20px 0 30px;
+
 	}
 
 	.title {
@@ -44,6 +49,29 @@
 	.input-group {
 		.main-input {
 			width: 400px;
+		}
+	}
+}
+
+@media(max-width:1200px) {
+	.subscribe {
+		.input-group {
+			.main-input {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.dark-btn {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media(max-width:765px) {
+	.subscribe {
+		.text-center {
+			width: 100%;
 		}
 	}
 }

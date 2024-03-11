@@ -143,4 +143,16 @@
 		}
 	}
 }
+
+@media(max-width:820px) {
+	.carousel-section {
+		.carousel {
+
+			.carousel-control-prev-icon,
+			.carousel-control-next-icon {
+				padding: 15px;
+			}
+		}
+	}
+}
 </style>

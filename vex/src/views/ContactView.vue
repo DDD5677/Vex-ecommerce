@@ -1,9 +1,9 @@
 <template>
 	<section class="contact-page">
 		<PageHeader title="Contact Us" />
-		<div class="container main">
-			<div class="row">
-				<div class="col-md-6">
+		<div class="container ">
+			<div class="row main">
+				<div class="col-md-6 mb-4">
 					<form action="">
 						<MainInput placeholder="Your Name"></MainInput>
 						<MainInput type="email" placeholder="Your Email"></MainInput>

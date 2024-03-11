@@ -253,4 +253,55 @@ const goToCart = () => {
 		}
 	}
 }
+
+@media(max-width:960px) {
+	.product {
+		.modal {
+			.modal-dialog {
+				max-width: 80%;
+				margin-top: 80px;
+			}
+
+			.modal-body {
+				flex-direction: column;
+
+
+			}
+		}
+	}
+}
+
+@media(max-width:600px) {
+	.product {
+		.modal {
+			.modal-dialog {
+				max-width: 100%;
+				margin: 80px 25px;
+			}
+
+			.modal-body {
+				padding: 20px;
+
+				.left {
+					img {
+						width: 100%;
+					}
+
+				}
+
+				.right {
+					.modal-price {
+						margin: 10px 0;
+						font-size: 25px;
+					}
+
+					.modal-dsc {
+						margin: 10px 0;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
 </style>

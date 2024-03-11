@@ -20,6 +20,10 @@ import OrdersViewVue from "@/views/OrdersView.vue";
 import AddressViewVue from "@/views/AddressView.vue";
 import ProfileDetailViewVue from "@/views/ProfileDetailView.vue";
 import BlogLeftSidebar from "@/views/BlogLeftSidebar.vue";
+import BlogRightSidebar from "@/views/BlogRightSidebar.vue";
+import BlogFullSidebar from "@/views/BlogFullSidebar.vue";
+import BlogGridSidebar from "@/views/BlogGridSidebar.vue";
+import SingleBlogView from "@/views/SingleBlogView.vue";
 
 const router = createRouter({
    history: createWebHistory(import.meta.env.BASE_URL),
@@ -103,6 +107,26 @@ const router = createRouter({
          path: "/blogleft",
          name: "blog left",
          component: BlogLeftSidebar,
+      },
+      {
+         path: "/blogright",
+         name: "blog right",
+         component: BlogRightSidebar,
+      },
+      {
+         path: "/blogfull",
+         name: "blog full",
+         component: BlogFullSidebar,
+      },
+      {
+         path: "/blog-grid",
+         name: "blog grid",
+         component: BlogGridSidebar,
+      },
+      {
+         path: "/blog-single",
+         name: "blog single",
+         component: SingleBlogView,
       },
       {
          path: "/coming_soon",

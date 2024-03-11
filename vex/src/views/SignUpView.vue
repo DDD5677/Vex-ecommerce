@@ -2,7 +2,7 @@
 	<section class="signup">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-6">
+				<div class="col-md-8 col-lg-6">
 					<div class="form">
 						<brand></brand>
 						<h2 class="title">

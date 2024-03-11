@@ -125,21 +125,7 @@
 					</div>
 					<div class="tab-pane fade reviews" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
 						tabindex="0">
-						<div v-for="i in 3" class="review">
-							<div class="img-box">
-								<img src="@/assets/images/blog/avater-1.jpg" alt="">
-							</div>
-							<div class="content">
-								<h5 class="name">JONATHON ANDREW</h5>
-								<span class="date">July 02, 2015, at 11:34</span>
-								<span class="reply"><i class="fa-solid fa-comments fa-flip-horizontal"></i> Reply</span>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend
-									eleifend.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laborum minima,
-									reprehenderit laboriosam officiis praesentium? Impedit minus provident assumenda quae.
-								</p>
-							</div>
-						</div>
+						<Review v-for="i in 3"></Review>
 					</div>
 				</div>
 			</div>
@@ -160,6 +146,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { useProductStore } from '@/stores/products';
 import Product from '@/components/Product.vue';
+import Review from '@/components/Review.vue';
 const productStore = useProductStore()
 const count = ref(0)
 const increament = () => {
@@ -307,7 +294,7 @@ const modules = [FreeMode, Navigation, Thumbs, Autoplay]
 	}
 
 	.product-tab {
-		margin-bottom: 40px;
+		margin: 40px 0;
 
 		ul {
 			margin-bottom: 10px;
@@ -347,43 +334,7 @@ const modules = [FreeMode, Navigation, Thumbs, Autoplay]
 		}
 	}
 
-	.review {
-		display: flex;
-		font-size: 12px;
-		color: #7e7e7e;
-		margin-top: 15px;
 
-		.img-box {
-			padding-right: 20px;
-
-			img {
-				width: 60px;
-				height: 60px;
-			}
-		}
-
-		.content {
-			.name {
-				font-size: 12px;
-				color: #000;
-			}
-
-			.reply {
-				margin-left: 5px;
-
-				i {
-					font-size: 10px;
-				}
-			}
-
-			p {
-				font-size: 14px;
-				color: #757575;
-				margin-bottom: 30px;
-				margin-top: 5px;
-			}
-		}
-	}
 
 	.related-products {
 		padding: 80px 0 40px;

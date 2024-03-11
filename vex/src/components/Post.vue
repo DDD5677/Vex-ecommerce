@@ -19,7 +19,7 @@
 				sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Quod, facere.
 			</p>
-			<DarkButton>Continue reading</DarkButton>
+			<DarkButton :to="{ name: 'blog single' }">Continue reading</DarkButton>
 		</div>
 	</div>
 </template>
@@ -63,7 +63,9 @@ const getImageUrl = (name) => {
 			font-size: 12px;
 			text-transform: uppercase;
 			display: flex;
-			gap: 20px;
+			flex-wrap: wrap;
+			row-gap: 5px;
+			column-gap: 15px;
 			color: #5f5b5b;
 			font-weight: 300;
 

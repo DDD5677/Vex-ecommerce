@@ -56,6 +56,7 @@ import PageHeader from '@/components/PageHeader.vue'
 
 		.btns {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			gap: 10px;
 
